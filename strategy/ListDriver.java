@@ -31,7 +31,7 @@ public class ListDriver {
         removeGuest("Kevin");
 
         BinarySearch bSearch = new BinarySearch();
-        //gList.setSearchBehavior(bSearch); commented out to commit file
+        gList.setSearchBehavior(bSearch);
 
         addGuest("Sara");
         addGuest("Kim");

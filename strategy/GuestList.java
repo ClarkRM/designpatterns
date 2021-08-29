@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class GuestList {
     
     private String title;
-    private ArrayList<String> people;
-    private SearchBehavoir SearchBehavoir;
+    private ArrayList<String> people = new ArrayList<>();
+    private SearchBehavoir searchBehavoir = new LinearSearch();
 
     /**
      * Creates a new guestlist with a specified title
@@ -25,8 +25,11 @@ public class GuestList {
      * @return Returns true if the person is in the list, false if the person is not in the list 
      */
     public boolean add(String person) {
-
-        return true; //added to resolve error, remove later
+        if(!searchBehavoir.contains(people, person)) {
+            people.add(person);
+            return true;
+        }
+        return false;
 
     }
 
@@ -36,8 +39,11 @@ public class GuestList {
      * @return Returns true if the person is in the list, false if the person is not in the list
      */
     public boolean remove(String person) {
-
-        return true; //added to resolve error, remove later
+        if(searchBehavoir.contains(people, person)) {
+            people.remove(person);
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -45,16 +51,15 @@ public class GuestList {
      * @return The user-entered title
      */
     public String getTitle() {
-
         return this.title;
     }
     
     /**
-     * Allows user to enter which search behavior to use, etiher binary search or linear search
-     * @param searchBehavoir
+     * Allows user to enter which search behavior to use
+     * @param searchBehavoir either binary search or linear search
      */
     public void setSearchBehavior(SearchBehavoir searchBehavoir) {
-
+        this.searchBehavoir = searchBehavoir;
     }
 
     /**
@@ -62,7 +67,6 @@ public class GuestList {
      * @return the data in the array list
      */
     public ArrayList<String> getList() {
-
         return this.people;
     }
 

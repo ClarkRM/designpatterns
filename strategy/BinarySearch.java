@@ -9,6 +9,9 @@ import java.util.*;
  */
 public class BinarySearch implements SearchBehavoir {
     
+    /**
+     * Contains method searches for a name in the list and returns true if the name is in the list
+     */
     public boolean contains(ArrayList<String> data, String item) {
 
         Collections.sort(data);
