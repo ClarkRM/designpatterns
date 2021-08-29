@@ -21,20 +21,18 @@ public class BinarySearch implements SearchBehavoir {
         
         while (lowPointer <= highPointer) {
 
-            double middle = Math.ceil(highPointer + lowPointer) / 2;
-            int middlePointer = (int)middle;  
+            int middlePointer = (highPointer + lowPointer) / 2;
 
             if (data.get(middlePointer).equalsIgnoreCase(item)) {
                 return true;
             }
             else if (data.get(middlePointer).compareToIgnoreCase(item) < 0) {
-                lowPointer = middlePointer - 1;
+                lowPointer = middlePointer + 1;
             }
             else if (data.get(middlePointer).compareToIgnoreCase(item) > 0) {
-                highPointer = middlePointer + 1;
+                highPointer = middlePointer - 1;
             }
         }
-
         return false;
     }
 }
