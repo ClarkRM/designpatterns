@@ -9,7 +9,7 @@ public class GuestList {
     
     private String title;
     private ArrayList<String> people = new ArrayList<>();
-    private SearchBehavoir searchBehavoir = new LinearSearch();
+    private SearchBehavoir searchBehavoir;
 
     /**
      * Creates a new guestlist with a specified title
@@ -17,6 +17,7 @@ public class GuestList {
      */
     GuestList(String title) {
         this.title = title;
+        setSearchBehavior(new LinearSearch());
     }
 
     /**

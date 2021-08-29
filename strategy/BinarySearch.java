@@ -17,22 +17,24 @@ public class BinarySearch implements SearchBehavoir {
         Collections.sort(data);
 
         int lowPointer = 0;
-        int highPointer = data.size() -1;
-
+        int highPointer = data.size() - 1;
+        
         while (lowPointer <= highPointer) {
-            
-            int middlePointer = lowPointer + (highPointer - lowPointer) / 2;
+
+            double middle = Math.ceil(highPointer + lowPointer) / 2;
+            int middlePointer = (int)middle;  
 
             if (data.get(middlePointer).equalsIgnoreCase(item)) {
                 return true;
             }
             else if (data.get(middlePointer).compareToIgnoreCase(item) < 0) {
-                lowPointer = middlePointer + 1;
+                lowPointer = middlePointer - 1;
             }
             else if (data.get(middlePointer).compareToIgnoreCase(item) > 0) {
-                highPointer = middlePointer +1;
+                highPointer = middlePointer + 1;
             }
         }
+
         return false;
     }
 }
