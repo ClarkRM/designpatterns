@@ -12,8 +12,8 @@ public class GuestList {
     private SearchBehavoir SearchBehavoir;
 
     /**
-     * 
-     * @param title
+     * Creates a new guestlist with a specified title
+     * @param title the title the user provides
      */
     GuestList(String title) {
         this.title = title;
@@ -41,8 +41,8 @@ public class GuestList {
     }
 
     /**
-     * 
-     * @return
+     * A method to return the title of the list
+     * @return The user-entered title
      */
     public String getTitle() {
 
@@ -58,12 +58,12 @@ public class GuestList {
     }
 
     /**
-     * 
-     * @return
+     * A method to return the names stored in the ArrayList
+     * @return the data in the array list
      */
     public ArrayList<String> getList() {
 
-        return null; //added to resolve error, remove later
+        return this.people;
     }
 
 }
