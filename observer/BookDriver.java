@@ -11,7 +11,7 @@ public class BookDriver {
      * Clients wishlist
      */
     public void run() {
-        /*
+        
         BestSellers bestSellers = new BestSellers();
         Observer myStore = new Store(bestSellers);
         Observer myCustomer = new Customer(bestSellers, "Amy", "Smith");
@@ -26,10 +26,10 @@ public class BookDriver {
         bestSellers.addBook(new Book("Girl A", "Abigail", "Dean"));
         bestSellers.addBook(new Book("The Kindest Lie", "Nancy", "Johnson"));
         bestSellers.addBook(new Book("My Year Abroad", "Chang", "Rae-Lee"));
-
+/*
         myStore.display();
         myCustomer.display();
-        */
+  */      
     }
 
     public static void main(String[] args){
