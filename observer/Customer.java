@@ -1,6 +1,10 @@
 package observer;
 import java.util.ArrayList;
 
+/**
+ * A class that creates the Customer observer object and its Wishlist
+ * @author Robbie Clark
+ */
 public class Customer implements Observer{
     
     private Subject subject;
@@ -8,6 +12,12 @@ public class Customer implements Observer{
     private String lastName;
     private ArrayList<Book> wishlist;
 
+    /**
+     * Initializes the customer object
+     * @param subject The subject of a customer observer
+     * @param firstName The customer's first name
+     * @param lastName The customer's last name
+     */
     public Customer(Subject subject, String firstName, String lastName) {
         
         subject.registerObserver(this);
@@ -16,11 +26,17 @@ public class Customer implements Observer{
         wishlist = new ArrayList<Book>();
     }
 
+    /**
+     * A method that adds a new book to the customer's wishlist
+     */
     public void update(Book book) {
 
         wishlist.add(book);
     }
 
+    /**
+     * A method that loops through the customer's wishlist and displays the contents
+     */
     public void display() {
 
         System.out.println("Wishlist:");
