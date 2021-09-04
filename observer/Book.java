@@ -31,7 +31,7 @@ public class Book {
 
     public String toString() {
 
-        return title + " by: " + authorFirstName + authorLastName;
+        return getTitle() + " by: " + getAuthorFirstName() + " " + getAuthorLastName();
     }
 
 }

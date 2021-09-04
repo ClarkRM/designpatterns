@@ -10,15 +10,23 @@ public class Customer implements Observer{
 
     public Customer(Subject subject, String firstName, String lastName) {
         
+        subject.registerObserver(this);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        wishlist = new ArrayList<Book>();
     }
 
     public void update(Book book) {
 
+        wishlist.add(book);
     }
 
     public void display() {
 
-        
+        System.out.println("Wishlist:");
+        for(Book book : this.wishlist) {
+            System.out.println(book.toString());
+        }
     }
 
 }
