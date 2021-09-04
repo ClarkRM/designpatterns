@@ -33,6 +33,7 @@ public class BestSellers implements Subject {
     public void addBook(Book book) {
 
         bestSellers.add(book);
+        notifyObservers(book);
     }
 
 
