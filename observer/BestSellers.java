@@ -1,6 +1,10 @@
 package observer;
 import java.util.ArrayList;
 
+/**
+ * A class that creates the BestSellers Subject
+ * @author Robbie Clark
+ */
 public class BestSellers implements Subject {
     
     private ArrayList<Observer> observers;
