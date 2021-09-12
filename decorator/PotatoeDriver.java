@@ -10,7 +10,6 @@ public class PotatoeDriver {
     public void run() {
       
         Character potatoe = new PotatoeHead();
-        /*
         Character eyePotatoe = new Eyes(potatoe);
         Character eyeNosePotatoe = new Nose(eyePotatoe);
         Character mouthEyeNosePotatoe = new Mouth(eyeNosePotatoe);
@@ -22,8 +21,6 @@ public class PotatoeDriver {
         Character eyeHatPotatoe2 = new Eyes(hatPotatoe2);
 
         eyeHatPotatoe2.draw();
-        */
-        potatoe.draw();
     }
 
     public static void main(String[] args) {

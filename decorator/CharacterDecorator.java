@@ -4,12 +4,12 @@ public abstract class CharacterDecorator extends Character {
     
     protected Character character;
 
-    public CharacterDecorator() {
-
+    public CharacterDecorator(Character character) {
+        for (int i = 0; i < character.sections.size(); i++) {
+            this.sections.add(i, character.sections.get(i));
+        }
     }
 
-    public void customize() {
-
-    }
+    public abstract void customize();
 
 }
