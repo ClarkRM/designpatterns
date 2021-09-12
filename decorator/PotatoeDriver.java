@@ -8,8 +8,9 @@ public class PotatoeDriver {
      * Creates potatoe heads and adds features to them
      */
     public void run() {
-      /*
+      
         Character potatoe = new PotatoeHead();
+        /*
         Character eyePotatoe = new Eyes(potatoe);
         Character eyeNosePotatoe = new Nose(eyePotatoe);
         Character mouthEyeNosePotatoe = new Mouth(eyeNosePotatoe);
@@ -22,6 +23,7 @@ public class PotatoeDriver {
 
         eyeHatPotatoe2.draw();
         */
+        potatoe.draw();
     }
 
     public static void main(String[] args) {
