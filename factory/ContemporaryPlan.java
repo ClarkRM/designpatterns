@@ -1,28 +1,33 @@
 package factory;
+import java.util.ArrayList;
 
 public class ContemporaryPlan extends HousePlan {
     
     public ContemporaryPlan() {
         super(5, 40, 3000);
+        setMaterials();
+        setFeatures();
     }
 
     protected void setMaterials() {
 
-        this.materials.add("Ceramics");
-        this.materials.add("High-Strength Alloys");
-        this.materials.add("Composites");
+        materials = new ArrayList<String>();
+        materials.add("Ceramics");
+        materials.add("High-Strength Alloys");
+        materials.add("Composites");
     }
 
     protected void setFeatures() {
 
-        this.features.add("Oversized Windows");
-        this.features.add("Unconventional Roofs");
-        this.features.add("Minimalism");
-        this.features.add("Open Floor Plan");
+        features = new ArrayList<String>();
+        features.add("Oversized Windows");
+        features.add("Unconventional Roofs");
+        features.add("Minimalism");
+        features.add("Open Floor Plan");
     }
 
     public String toString() {
 
-        return "" + super.toString();
+        return "Contemporary House \n" + super.toString();
     }
 }

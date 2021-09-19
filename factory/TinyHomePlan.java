@@ -1,4 +1,5 @@
 package factory;
+import java.util.ArrayList;
 
 public class TinyHomePlan extends HousePlan {
    
@@ -10,22 +11,24 @@ public class TinyHomePlan extends HousePlan {
 
     protected void setMaterials() {
         
-        this.materials.add("Lumber");
-        this.materials.add("Insulation");
-        this.materials.add("Metal Roofing");
-        this.materials.add("Hardware");
+        materials = new ArrayList<String>();
+        materials.add("Lumber");
+        materials.add("Insulation");
+        materials.add("Metal Roofing");
+        materials.add("Hardware");
     }
 
     protected void setFeatures() {
 
-        this.features.add("Natural Light");
-        this.features.add("Creative storage");
-        this.features.add("Multipurpose areas");
-        this.features.add("Multi-use applications");
+        features = new ArrayList<String>();
+        features.add("Natural Light");
+        features.add("Creative storage");
+        features.add("Multipurpose areas");
+        features.add("Multi-use applications");
     }
 
     public String toString() {
 
-        return "" + super.toString();
+        return "Tiny Home \n" + super.toString();
     }
 }

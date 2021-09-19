@@ -18,11 +18,11 @@ public abstract class HousePlan {
     }
 
     protected void setMaterials() {
-
+        
     }
 
     protected void setFeatures() {
-
+        
     }
 
     public ArrayList<String> getMaterials() {
@@ -52,7 +52,25 @@ public abstract class HousePlan {
 
     public String toString() {
         
-        return "";
+        String allInfo = "";
+
+        allInfo += "Square feet: " + getSquareFeet() + "\n";
+        allInfo += "Rooms: " + getNumRooms() + "\n";
+        allInfo += "Windows: " + getNumWindows() + "\n";
+
+        allInfo += "\nMaterials: \n";
+
+        for(String materials : materials) {
+            allInfo += "-"+ materials + "\n";
+        }
+
+        allInfo += "\nFeatures: \n";
+
+        for(String features : features) {
+            allInfo += "-" + features + "\n";
+        }
+
+        return allInfo;
     }
 
 }

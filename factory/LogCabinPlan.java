@@ -1,4 +1,5 @@
 package factory;
+import java.util.ArrayList;
 
 public class LogCabinPlan extends HousePlan {
     
@@ -10,20 +11,22 @@ public class LogCabinPlan extends HousePlan {
 
     protected void setMaterials() {
         
-        this.materials.add("Log Siding");
-        this.materials.add("Board and Batten Siding");
-        this.materials.add("White Pine");
+        materials = new ArrayList<String>();
+        materials.add("Log Siding");
+        materials.add("Board and Batten Siding");
+        materials.add("White Pine");
     }
 
     protected void setFeatures() {
 
-        this.features.add("Timbered Roof");
-        this.features.add("High Insulation");
-        this.features.add("Rustic Effect");
+        features = new ArrayList<String>();
+        features.add("Timbered Roof");
+        features.add("High Insulation");
+        features.add("Rustic Effect");
     }
 
     public String toString() {
 
-        return "" + super.toString();
+        return "Log Cabin \n" + super.toString();
     }
 }

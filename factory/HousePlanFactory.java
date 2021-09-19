@@ -2,11 +2,21 @@ package factory;
 
 public class HousePlanFactory {
 
-    public HousePlan createHousePlan(String type) {
+    public static HousePlan createHousePlan(String type) {
+        HousePlan housePlan;
 
-        HousePlan housePlan = createHousePlan(type);
+        if(type.equalsIgnoreCase("log cabin")) {
+            
+            housePlan = new LogCabinPlan();
+        } else if (type.equalsIgnoreCase("tiny home")) {
+            
+            housePlan = new TinyHomePlan();
+        } else {
+            
+            housePlan = new ContemporaryPlan();
+        }
 
-        return housePlan;        
+        return housePlan;
     }
 
 }
