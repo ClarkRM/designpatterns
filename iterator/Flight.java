@@ -8,7 +8,7 @@ public class Flight {
     private int duration;
     private int transfers;
 
-    Flight(String flightNum, String from, String to, int duration, int transfers) {
+    public Flight(String flightNum, String from, String to, int duration, int transfers) {
         this.flightNum.equals(flightNum);
         this.from.equals(from);
         this.to.equals(to);
