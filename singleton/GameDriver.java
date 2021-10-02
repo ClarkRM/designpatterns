@@ -9,8 +9,8 @@ public class GameDriver {
      * Runs the trivia game
      */
     public void run(){
-        //TriviaGame game = TriviaGame.getInstance();
-        //game.play();
+        TriviaGame game = TriviaGame.getInstance();
+        game.play();
     }
 
     public static void main(String[] args){
