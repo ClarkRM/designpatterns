@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * A class that creates the Customer observer object and its Wishlist
  * @author Robbie Clark
  */
-public class Customer implements Observer{
+public class Customer implements Observer {
     
     private Subject subject;
     private String firstName;
