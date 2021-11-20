@@ -17,7 +17,68 @@ public class ArithemeticGame {
     }
 
     public void pressQuestionButton() {
-        //get two numbers and an operation, check what the operation is then have a set of ifs
+        int firstNum = state.getNum();
+        int secondNum = state.getNum();
+        String operation = state.getOperation();
+        int response;
+        System.out.println("\n"+firstNum +" "+ operation +" "+ secondNum + " = ");
+        
+        response = reader.nextInt();
+        reader.nextLine();
+
+        if(operation.equals("+")) {
+
+            if(response == (firstNum+secondNum)) {
+                System.out.println("Correct");
+                score++;
+            }
+            else {
+                System.out.println("Incorrect");
+                score--;
+            }
+
+        } else if(operation.equals("-")) {
+
+            if(response == (firstNum-secondNum)) {
+                System.out.println("Correct");
+                score++;
+            }
+            else {
+                System.out.println("Incorrect");
+                score--;
+            }
+           
+        } else if(operation.equals("*")) {
+
+            if(response == (firstNum*secondNum)) {
+                System.out.println("Correct");
+                score++;
+            }
+            else {
+                System.out.println("Incorrect");
+                score--;
+            }
+
+        } else if(operation.equals("/")) {
+
+            if(response == (firstNum/secondNum)) {
+                System.out.println("\nCorrect");
+                score++;
+            }
+            else {
+                System.out.println("\nIncorrect");
+                score--;
+            }
+        }
+
+        if(score >= 3) {
+            state.levelUp();
+            score = 0;
+        } else if(score <= -3) {
+            state.levelDown();
+            score = 0;
+        }
+        System.out.println();
     }
 
     public void setState(State state) {
