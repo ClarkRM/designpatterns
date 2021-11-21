@@ -10,7 +10,7 @@ public class Easy implements State {
     }
 
     public int getNum() {
-        return (random.nextInt(9)+1);
+        return (random.nextInt(10)+1);
     }
 
     public String getOperation() {

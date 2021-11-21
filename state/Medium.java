@@ -10,7 +10,7 @@ public class Medium implements State {
     }
 
     public int getNum() {
-        return (random.nextInt(49)+1);
+        return (random.nextInt(50)+1);
     }
 
     public String getOperation() {

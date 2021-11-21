@@ -10,7 +10,7 @@ public class Hard implements State {
     }
 
     public int getNum() {
-        return (random.nextInt(99)+1);
+        return (random.nextInt(100)+1);
     }
 
     public String getOperation() {
