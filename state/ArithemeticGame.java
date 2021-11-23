@@ -8,7 +8,9 @@ public class ArithemeticGame {
     private State state;
     private int score;
     private Scanner reader = new Scanner(System.in);
-
+    /**
+    * Constructor for the game, initializes each state and sets the overall state variable to easy
+    */
     public ArithemeticGame() {
         easyState = new Easy(this);
         mediumState = new Medium(this);
@@ -16,6 +18,10 @@ public class ArithemeticGame {
         state = easyState;
     }
 
+    /**
+     * Method that gets two random numbers and a random operation, uses those to create a math question
+     * Tracks score, when score == 3, the game levels up, score == -3, game levels down
+     */
     public void pressQuestionButton() {
         int firstNum = state.getNum();
         int secondNum = state.getNum();
@@ -81,18 +87,34 @@ public class ArithemeticGame {
         System.out.println();
     }
 
+    /**
+     * Method that sets the game state
+     * @param state the difficulty of the game
+     */
     public void setState(State state) {
         this.state = state;
     }
 
+    /**
+     * A method to return the easy mode state
+     * @return the easy mode
+     */
     public State getEasyState() {
         return easyState;
     }
 
+    /**
+     * A method to return the medium mode state
+     * @return the medium mode
+     */
     public State getMediumState() {
         return mediumState;
     }
 
+    /**
+     * A method to return the hard mode state
+     * @return the hard mode
+     */
     public State getHardState() {
         return hardState;
     }
